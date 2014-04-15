@@ -26,7 +26,28 @@ describe "CCCAdminTestSearch" do
     @driver.find_element(:id,"password").send_keys "password"
     @driver.find_element(:id,"signin_btn").click
     @driver.find_element(:link,"Admin Test").click
+
+    Selenium::WebDriver::Support::Select.new(@driver.find_element(:id, "service_type")).select_by(:text, "To Airport")
+    Selenium::WebDriver::Support::Select.new(@driver.find_element(:id, "search_pax")).select_by(:text, "2")
+
+    @driver.find_element(:id,"search_ride_date").click
+    @driver.find_element(:link,'17').click
+ 
+   Selenium::WebDriver::Support::Select.new(@driver.find_element(:id, "search_pickup_time_hour")).select_by(:text, "5 AM")
+
+    @driver.find_element(:id,"search_pickup_place").send_keys "4333 University Way Northeast, Seattle"
+    @driver.find_element(:id,"search_drop_off_place").send_keys "SEA"
+    @driver.find_element(:id,"search_submit").click
+    element_present?(:id, "modify-search").should be_true
   end
+
+  def element_present?(how, what)
+    @driver.find_element(how, what)
+    true
+  rescue Selenium::WebDriver::Error::NoSuchElementError
+    false
+  end
+
   
   def verify(&blk)
     yield
