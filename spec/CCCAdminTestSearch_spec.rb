@@ -31,9 +31,9 @@ describe "CCCAdminTestSearch" do
     Selenium::WebDriver::Support::Select.new(@driver.find_element(:id, "search_pax")).select_by(:text, "2")
 
     @driver.find_element(:id,"search_ride_date").click
-    @driver.find_element(:link,'17').click
+    @driver.find_element(:id,'calcurrent').click
  
-   Selenium::WebDriver::Support::Select.new(@driver.find_element(:id, "search_pickup_time_hour")).select_by(:text, "5 AM")
+   Selenium::WebDriver::Support::Select.new(@driver.find_element(:id, "search_pickup_time_hour")).select_by(:text, "11 PM")
 
     @driver.find_element(:id,"search_pickup_place").send_keys "4333 University Way Northeast, Seattle"
     @driver.find_element(:id,"search_drop_off_place").send_keys "SEA"
