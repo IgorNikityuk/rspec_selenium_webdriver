@@ -22,23 +22,6 @@ describe "CCCAdminTestSearch" do
     @driver.get(@base_url)
     !60.times{ break if (@driver.title == "Limo & Car Services, Party Bus Rentals and more | Limos.com" rescue false); sleep 1 }
     @driver.find_element(:link,"Sign In").click
-    @driver.find_element(:id,"email").send_keys "joyce2@limos.com"
-    @driver.find_element(:id,"password").send_keys "password"
-    @driver.find_element(:id,"signin_btn").click
-    @driver.find_element(:link,"Admin Test").click
-
-    Selenium::WebDriver::Support::Select.new(@driver.find_element(:id, "service_type")).select_by(:text, "To Airport")
-    Selenium::WebDriver::Support::Select.new(@driver.find_element(:id, "search_pax")).select_by(:text, "2")
-
-    @driver.find_element(:id,"search_ride_date").click
-    @driver.find_element(:id,'calcurrent').click
- 
-   Selenium::WebDriver::Support::Select.new(@driver.find_element(:id, "search_pickup_time_hour")).select_by(:text, "11 PM")
-
-    @driver.find_element(:id,"search_pickup_place").send_keys "4333 University Way Northeast, Seattle"
-    @driver.find_element(:id,"search_drop_off_place").send_keys "SEA"
-    @driver.find_element(:id,"search_submit").click
-    element_present?(:id, "modify-search").should be_true
   end
 
   def element_present?(how, what)
