@@ -1,4 +1,4 @@
-# RSpec Selenium_webdriver
+# RSpec + Selenium-webdriver
 This is template project for starting with Rspec and Selenium-webdriver gems.
 By default it uses Firefox browser.
 
