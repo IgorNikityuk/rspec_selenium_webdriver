@@ -8,5 +8,6 @@ git clone https://github.com/SeleniumWD/rspec_selenium_webdriver.git
 
 bundle install
 
-rspec spec
+rspec spec 
 
+rake all
