@@ -1,8 +1,12 @@
-# rspec_selenium_webdriver
-Convert and run selenium ide scripts in cmd
+# RSpec Selenium_webdriver
+This is template project for starting with Rspec and Selenium-webdriver gems.
+By default it uses Firefox browser.
 
-This is template project for starting with rspec and selenium-webdriver.
 Execute next commands:
-git clone repository_url =>
-bundle install =>
+
+git clone https://github.com/SeleniumWD/rspec_selenium_webdriver.git
+
+bundle install
+
 rspec spec
+
