@@ -1,13 +1,12 @@
-require "json"
 require "selenium-webdriver"
 require "rspec"
 include RSpec::Expectations
 
-describe "CCCAdminTestSearch" do
+describe "FIRST TEST" do
 
   before(:each) do
     @driver = Selenium::WebDriver.for :firefox
-    @base_url = "http://staging.limos.com"
+    @base_url = "http://www.limos.com"
     @accept_next_alert = true
     @driver.manage.timeouts.implicit_wait = 30
     @verification_errors = []
